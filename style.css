@@ -1,0 +1,84 @@
+  :root{
+    --fundo:#0d1a26;
+    --painel:#12263a;
+    --painel-2:#0a151f;
+    --linha:#1d3c57;
+    --texto:#e6eef5;
+    --texto-fraco:#8fa9bf;
+    --folha:#f0b357;
+    --interno:#5fc7bd;
+    --erro:#ff8a7a;
+    --ok:#7fd67f;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--fundo);
+    color:var(--texto);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:28px 20px 80px}
+  header h1{
+    font-size:1.9rem;font-weight:650;letter-spacing:-.02em;margin:0 0 4px;
+  }
+  header p{margin:0;color:var(--texto-fraco);max-width:62ch}
+  .abas{display:flex;gap:4px;margin:28px 0 0;border-bottom:1px solid var(--linha);flex-wrap:wrap}
+  .aba{
+    background:none;border:1px solid transparent;border-bottom:none;color:var(--texto-fraco);
+    padding:10px 18px;font-size:1rem;font-family:inherit;cursor:pointer;border-radius:8px 8px 0 0;
+  }
+  .aba:hover{color:var(--texto)}
+  .aba[aria-selected="true"]{
+    background:var(--painel);border-color:var(--linha);color:var(--texto);
+    margin-bottom:-1px;padding-bottom:11px;
+  }
+  .painel{background:var(--painel);border:1px solid var(--linha);border-top:none;border-radius:0 0 12px 12px;padding:24px}
+  .painel[hidden]{display:none}
+  label{display:block;font-size:.92rem;color:var(--texto-fraco);margin:16px 0 6px}
+  input[type=text],input[type=password],textarea,select{
+    width:100%;background:var(--painel-2);color:var(--texto);border:1px solid var(--linha);
+    border-radius:8px;padding:10px 12px;font-family:inherit;font-size:1rem;
+  }
+  textarea{min-height:110px;resize:vertical}
+  input:focus,textarea:focus,select:focus,button:focus-visible{outline:2px solid var(--interno);outline-offset:1px}
+  .linha{display:flex;gap:14px;flex-wrap:wrap}
+  .linha>*{flex:1 1 220px;min-width:0}
+  button{
+    background:var(--interno);color:#06212a;border:none;border-radius:8px;
+    padding:11px 20px;font-size:1rem;font-family:inherit;font-weight:600;cursor:pointer;
+  }
+  button:hover{filter:brightness(1.08)}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  button.secundario{background:transparent;color:var(--texto);border:1px solid var(--linha);font-weight:500}
+  .acoes{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:22px}
+  .aviso{margin-top:16px;padding:11px 14px;border-radius:8px;background:var(--painel-2);border-left:3px solid var(--interno);font-size:.95rem}
+  .aviso.erro{border-left-color:var(--erro);color:#ffd6cf}
+  .aviso.ok{border-left-color:var(--ok)}
+  .arvore-box{margin-top:26px;border-top:1px solid var(--linha);padding-top:20px}
+  .arvore-box h2{font-size:1.05rem;margin:0 0 2px;font-weight:600}
+  .legenda{color:var(--texto-fraco);font-size:.9rem;margin:0 0 14px}
+  .palco{background:var(--painel-2);border:1px solid var(--linha);border-radius:10px;overflow:hidden}
+  svg{display:block;width:100%;height:auto;min-height:220px}
+  .controles{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+  .controles input[type=range]{flex:0 1 160px;accent-color:var(--interno)}
+  .passo-txt{
+    font-family:ui-monospace,Consolas,"Courier New",monospace;font-size:.9rem;
+    background:var(--painel-2);border:1px solid var(--linha);border-radius:8px;
+    padding:10px 12px;margin-top:12px;min-height:42px;white-space:pre-wrap;word-break:break-word;
+  }
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.9rem}
+  th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--linha)}
+  th{color:var(--texto-fraco);font-weight:500}
+  td.cod{font-family:ui-monospace,Consolas,monospace;color:var(--folha)}
+  .rolar{max-height:230px;overflow:auto}
+  details{margin-top:18px}
+  summary{cursor:pointer;color:var(--texto-fraco)}
+  .hex{font-family:ui-monospace,Consolas,monospace;font-size:.82rem;color:var(--texto-fraco);
+       background:var(--painel-2);border:1px solid var(--linha);border-radius:8px;padding:10px;
+       margin-top:10px;max-height:150px;overflow:auto;word-break:break-all}
+  ol.guia{padding-left:20px;max-width:70ch}
+  ol.guia li{margin-bottom:10px}
+  .arquivo-alvo{font-size:.9rem;color:var(--texto-fraco);margin-top:8px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}

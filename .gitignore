@@ -1,0 +1,9 @@
+# SO / editores
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# arquivos de mensagem gerados durante testes
+*.msg
